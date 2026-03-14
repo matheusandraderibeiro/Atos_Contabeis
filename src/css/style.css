@@ -1,0 +1,24 @@
+@font-face {
+    font-size: 16px;
+    font-style: normal;
+    font-display: swap;
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+:root {
+    /* Paleta de Cores */
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --amarelo-ouro: #FFC33C;
+    --roxo-meia-noite: #1A151F;
+    --azul-acinzentado-muito-escuro: #232935;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
