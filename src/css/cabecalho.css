@@ -5,7 +5,7 @@
 #cabecalho {
     width: 100%;
     height: auto;
-    padding: var(--cabecalho__container--padding);
+    padding: var(--container__padding--mobile);
     background-color: var(--cabecalho-background);
 }
 
@@ -18,3 +18,25 @@
 /*======================================================================================================*/
 /*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
 /*======================================================================================================*/
+
+@media screen and (min-width: 768px) {
+    #cabecalho {
+        padding: var(--container__padding--desktop);
+    }
+
+    #cabecalho a {
+        width: clamp(12.5rem, 10.8946rem + 3.3445vw, 13.75rem); /* Largura fluida de 200px a 220px para telas entre 768px e 1366px */
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #cabecalho a {
+        width: clamp(13.75rem, 6.0447rem + 9.0253vw, 16.875rem); /* Largura fluida de 220px a 270px para telas entre 1366px e 1920px */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #cabecalho a {
+        width: clamp(16.875rem, 12.1382rem + 3.9474vw, 20.625rem); /* Largura fluida de 270px a 330px para telas entre 1920px e 2560px */
+    }
+}
