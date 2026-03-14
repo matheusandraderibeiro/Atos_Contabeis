@@ -1,3 +1,5 @@
+@import url(cabecalho.css);
+
 @font-face {
     font-size: 16px;
     font-style: normal;
@@ -7,12 +9,18 @@
 }
 
 :root {
-    /* Paleta de Cores */
+    /* Paleta de Cores Base*/
     --preto: #000000;
     --branco: #FFFFFF;
     --amarelo-ouro: #FFC33C;
     --roxo-meia-noite: #1A151F;
     --azul-acinzentado-muito-escuro: #232935;
+
+    /* Paleta de Cores - Cabeçalho*/
+    --cabecalho-background: var(--amarelo-ouro);
+
+    /* Espaçaçmento - Cabeçalho*/
+    --cabecalho__container--padding: .5rem;
 }
 
 * {
@@ -21,4 +29,13 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;   
+}
+
+#cabecalho__nav--logo-AcDesktop {
+    display: none;
 }
