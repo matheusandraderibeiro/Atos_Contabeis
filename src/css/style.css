@@ -21,6 +21,7 @@
     /*Espaçamentos*/
     --container__padding--mobile: 0 .5rem;
     --container__padding--desktop: 0.1rem .6rem;
+
 }
 
 * {
@@ -47,6 +48,15 @@ body {
     display: none;
 }
 
+.container--titulo {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    text-align: center;
+} .container--titulo h2 {
+    font-size: clamp(1.5rem, 1.2368rem + 1.3158vw, 2.5rem); /* Largura fluida de 24px a 40px para telas entre 320px e 1536px */
+}
+
 /*======================================================================================================*/
 /*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
 /*======================================================================================================*/
@@ -64,6 +74,12 @@ body {
 @media screen and (min-width: 1440px) {
     body {
         font-size: clamp(1rem, 0.25rem + 0.8333vw, 1.25rem); /* Largura fluida de 16px a 20px para telas entre 1440px e 1920px */
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .container--titulo h2 {
+        font-size: clamp(2.5rem, 1.5625rem + 0.9766vw, 3.125rem); /* Largura fluida de 40px a 50px para telas entre 1536px e 2560px */
     }
 }
 
