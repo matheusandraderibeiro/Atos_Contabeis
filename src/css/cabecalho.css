@@ -5,7 +5,8 @@
 #cabecalho {
     width: 100%;
     height: auto;
-    padding: var(--container__padding--mobile);
+    padding-block: var(--container__pd--block);
+    padding-inline: var(--container__pd--inline);
     background-color: var(--cabecalho-background);
 }
 
@@ -15,15 +16,13 @@
     display: inline-block;
 }
 
+
 /*======================================================================================================*/
 /*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
 /*======================================================================================================*/
 
-@media screen and (min-width: 768px) {
-    #cabecalho {
-        padding: var(--container__padding--desktop);
-    }
 
+@media screen and (min-width: 768px) {
     #cabecalho a {
         width: clamp(12.5rem, 10.8946rem + 3.3445vw, 13.75rem); /* Largura fluida de 200px a 220px para telas entre 768px e 1366px */
     }

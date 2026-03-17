@@ -19,9 +19,8 @@
     --cabecalho-background: var(--amarelo-ouro);
 
     /*Espaçamentos*/
-    --container__padding--mobile: 0 .5rem;
-    --container__padding--desktop: 0.1rem .6rem;
-
+    --container__pd--block: clamp(0rem, -0.0455rem + 0.2273vw, 0.1rem); /* Padding fluido de 0px a 2px para telas entre 320px e 1024px */
+    --container__pd--inline: clamp(0.5rem, 0.4545rem + 0.2273vw, 0.6rem); /* Padding fluido de 8px a 10px para telas entre 320px e 1024px */
 }
 
 * {
@@ -57,9 +56,11 @@ body {
     font-size: clamp(1.5rem, 1.2368rem + 1.3158vw, 2.5rem); /* Largura fluida de 24px a 40px para telas entre 320px e 1536px */
 }
 
+
 /*======================================================================================================*/
 /*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
 /*======================================================================================================*/
+
 
 @media screen and (min-width: 768px) {
     #cabecalho__nav--logo-AcDesktop {
