@@ -38,6 +38,11 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+main {
+    padding-block: var(--container__pd--block);
+    padding-inline: var(--container__pd--inline);
+}
+
 .logo {
     width: 100%;
     height: 100%;   
