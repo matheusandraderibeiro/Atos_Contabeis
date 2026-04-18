@@ -1,0 +1,119 @@
+/*======================================================================================================*/
+/* -------------------------------- Controle de Cards da Área de Serviços ------------------------------*/
+/*======================================================================================================*/
+
+
+#servicos input[type=radio] {
+    display: none;
+}
+
+#servicos .servicos__controle {
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    margin: 2rem 0 5px 0;
+    justify-content: flex-end;
+}
+
+#servicos .servicos__controle button {
+    border: none;
+    height: auto;
+    cursor: pointer;
+    background: none;
+    width: var(--btn__width--controle);
+}
+
+
+/*======================================================================================================*/
+/* -------------------------------- Controle de Cards da Área de Serviços ------------------------------*/
+/*======================================================================================================*/
+
+
+.servicos__card--container {
+    width: 100%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.card__container--content {
+    gap: 1rem;
+    width: 400%;
+    height: auto;
+    display: flex; 
+    flex-direction: row;
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#servico1:checked ~ .card__container--content {
+    margin-left: 0%;
+} 
+#servico2:checked ~ .card__container--content {
+    margin-left: -100%;
+}
+#servico3:checked ~ .card__container--content {
+    margin-left: -200%;
+}
+#servico4:checked ~ .card__container--content {
+    margin-left: -300%;
+}
+
+.card__container--item {
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+
+.card__container--item article {
+    display: grid;
+}
+
+.card__item--supLeft {
+    gap: 1rem;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    transition: 450ms all ease-in-out;
+    background-color: var(--servicos-background-primario);
+}
+
+.supLeft__content--icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: 450ms all ease-in-out;
+}
+
+.supLeft__content--icon span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 450ms all ease-in-out;
+}
+
+.card__container--item:nth-child(1) .supLeft__content--icon span {
+    background-image: url(../img/doc-hover.svg);
+}
+
+.card__container--item:nth-child(2) .supLeft__content--icon span {
+    background-image: url(../img/calc-hover.svg);
+}
+
+.card__container--item:nth-child(3) .supLeft__content--icon span {
+    background-image: url(../img/people-hover.svg);
+}
+
+.card__container--item:nth-child(4) .supLeft__content--icon span {
+    background-image: url(../img/Shield-hover.svg);
+}
+
+.card__container--item:nth-child(5) .supLeft__content--icon span {
+    background-image: url(../img/arrow-hover.svg);
+}
+
+.card__item--supLeft h3 {
+    font-size: 1rem;
+    color: var(--servicos-texto-primario);
+}

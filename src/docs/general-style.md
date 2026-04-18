@@ -25,9 +25,25 @@ Este documento serve como um guia de referência para os padrões visuais e de c
 
 <br/><hr/><hr/><br/>
 
+# Dimensão
+### Botões de Controle ``< >`` 
+| Variável CSS | Propriedade | Método | Valor (Min → Max) | Breakpoints (Telas) | Descrição |
+| --- | --- | --- | --- | --- | --- |
+| *--btn__width--controle* | **width** | ``clamp`` | ``23px → 60px`` | ``320px → 1440px`` | Width dos botões usados para controlar os slides. |
+
+### Logo ``<a/>``
+| Propriedade | Método | Valor (Min → Max) | Breakpoints (Telas) | Descrição |
+| --- | --- | --- | --- | --- |
+| **width** | ``N/A`` | ``6rem (96px)`` | ``320px → 768px`` | Width de 6rem para telas de 320px a 768px. |
+| **width** | ``clamp`` | ``200px → 220px`` | ``768px → 1366px`` | Width de 200px a 220px para telas de 768px a 1366px. |
+| **width** | ``clamp`` | ``220px → 270px`` | ``1366px → 1920px`` | Width de 220px a 270px para telas de 1366px a 1920px. |
+| **width** | ``clamp`` | ``270px → 330px`` | ``1920px → 2560px`` | Width de 270px a 330px para telas de 1920px a 2560px. |
+
+<br/><hr/><hr/><br/>
+
 # Tamanho das Fonts 
 
-### Tamanho da font P 
+### Tamanho da font ``<p/>`` 
 | Propriedade | Método | Valor (Min → Max) | Breakpoints (Telas) | Descrição |
 | --- | --- | --- | --- | --- |
 | **font-size** | ``clamp`` | ``1rem (16px)`` | ``320px → 1440px`` | font-size: 1rem para telas entre 320ox e 1440px. |
@@ -35,7 +51,7 @@ Este documento serve como um guia de referência para os padrões visuais e de c
 | **font-size** | ``clamp`` | ``20px → 24px`` | ``1920px → 3440px`` | font-size de 20px a 24px para telas entre 1920px e 3440px. |
 
 
-### Tamanho da font h2
+### Tamanho da font ``<h2/>``
 | Propriedade | Método | Valor (Min → Max) | Breakpoints (Telas) | Descrição |
 | --- | --- | --- | --- | --- |
 | **font-size** | ``clamp`` | ``24px → 40px`` | ``320px → 1536px`` | font-size de 24px a 40px para telas entre 320px e 1536px. |

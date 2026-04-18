@@ -21,8 +21,8 @@
         </header>
 
         <main>
-            <section id="servicos">
-                <div class="container--titulo">
+            <section id="servicos" class="container">
+                <div class="servicos-conteudo container-titulo">
                     <h2>Nossos Serviços</h2>
                     <p>Oferecemos um portfólio completo de soluções contábeis, fiscais e trabalhistas, projetado para atender às necessidades específicas do seu negócio.</p>
                 </div>
@@ -32,27 +32,30 @@
                 <input type="radio" name="servico" id="servico3">
                 <input type="radio" name="servico" id="servico4">
 
-                <div class="servicos__controle">
-                    <button><img src="./src/img/seta_esquerda.svg" alt=""></button>
-                    <button><img src="./src/img/seta_direita.svg" alt=""></button>
+                <div class="servico-controle">
+                    <button class="servico-botao">
+                        <img src="./src/img/seta_esquerda.svg" alt="botão para esquerda">
+                    </button>
+                    <button class="servico-botao">
+                        <img src="./src/img/seta_direita.svg" alt="botão para direita">
+                    </button>
                 </div>
-
+                
                 <hr/>
 
-                <article class="servicos__card--container">
-                    <div class="card__container--overflow">
-                        <ul class="card__container--content">
-                            <li class="card__container--item">
-                                <div class="card__item--supLeft">
-                                    <div class="supLeft__content--icon"><span></span></div>
+                <article class="servicos-card">
+                    <div class="overflow">
+                        <ul class="card-content">
+                            <li class="card-item">
+                                <div class="item-superior">
+                                    <div class="card-content-icon"><span class="card-icon"></span></div>
                                     <h3>Contabilidade em Geral</h3>
                                 </div>
-
-                                <div class="card__item--infRight">
-                                    <div class="infRight__sup">
+                                <article class="content-meio-inferior">
+                                    <div class="item-meio">
                                         <h3>Contabilidade em Geral</h3>
                                         <p>Gestão completa das suas obrigações fiscais para decisões estratégicas inteligentes.</p>
-                                        
+
                                         <ul>
                                             <li>
                                                 <img src="./src/img/check.svg" alt="incluso">
@@ -72,15 +75,300 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="infRight__inf">
+                                    <div class="item-inferior">
                                         <p><b>Ideal para:</b> Empresas que buscam visão clara da saúde financeira.</p>
+                                        <a href="#"> Saiba mais</a>
                                     </div>
+                                </article>
+                            </li>
+                            <li class="card-item">
+                                <div class="item-superior">
+                                    <div class="card-content-icon"><span class="card-icon"></span></div>
+                                    <h3>Consultoria Tributária/Fiscal</h3>
+                                </div>
+                                <article class="content-meio-inferior">
+                                    <div class="item-meio">
+                                        <h3>Consultoria Tributária/Fiscal</h3>
+                                        <p>Planejamento tributário estratégico para reduzir impostos legalmente.</p>
+
+                                        <ul>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Apuração de impostos (ICMS, IPI, PIS, COFINS)</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Escolha do melhor regime tributário</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Identificação de créditos fiscais</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Prevenção de autuações e multas</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-inferior">
+                                        <p class="card-dica"><b>Ideal para:</b> Empresas que pagam impostos em excesso.</p>
+                                        <a href="#"> Saiba mais</a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="card-item">
+                                <div class="item-superior">
+                                    <div class="card-content-icon"><span class="card-icon"></span></div>
+                                    <h3>Cálculos e Soluções Trabalhistas</h3>
+                                </div>
+                                <article class="content-meio-inferior">
+                                    <div class="item-meio">
+                                        <h3>Cálculos e Soluções Trabalhistas</h3>
+                                        <p>Gestão completa do departamento pessoal sem dor de cabeça.</p>
+
+                                        <ul>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Folha de pagamento sempre em dia</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Cálculos de férias e rescisões</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>eSocial e obrigações acessórias</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Prevenção de processos trabalhistas</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-inferior">
+                                        <p class="card-dica"><b>Ideal para:</b> Empresas com funcionários CLT.</p>
+                                        <a href="#"> Saiba mais</a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="card-item">
+                                <div class="item-superior">
+                                    <div class="card-content-icon"><span class="card-icon"></span></div>
+                                    <h3>Regularização e Parcelamentos</h3>
+                                </div>
+                                <article class="content-meio-inferior">
+                                    <div class="item-meio">
+                                        <h3>Regularização e Parcelamentos</h3>
+                                        <p>Regularize sua empresa e volte a ter tranquilidade empresarial.</p>
+
+                                        <ul>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Negociação de dívidas fiscais</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Parcelamento com melhores condições</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Certidões negativas regularizadas</p>
+                                            </li>
+                                            <li>
+                                                <img src="./src/img/check.svg" alt="incluso">
+                                                <p>Planejamento de quitação</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-inferior">
+                                        <p class="card-dica"><b>Ideal para:</b> Empresas com pendências fiscais.</p>
+                                        <a href="#"> Saiba mais</a>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section id="qualidades" class="container">
+                <div class="qualidades-titulo container-titulo">
+                    <h2>Tranquilidade e Segurança para sua Gestão</h2>
+                    <p>Por que escolher a Atos Contábeis?</p>
+                </div>
+
+                <input type="radio" name="qualidades" id="qualidades1" checked>
+                <input type="radio" name="qualidades" id="qualidades2">
+                <input type="radio" name="qualidades" id="qualidades3">
+                <input type="radio" name="qualidades" id="qualidades4">
+
+                <div class="qualidade-controle">
+                    <button class="qualidade-botao">
+                        <img src="./src/img/seta_esquerda.svg" alt="botão para esquerda">
+                    </button>
+                    <button class="qualidade-botao">
+                        <img src="./src/img/seta_direita.svg" alt="botão para direita">
+                    </button>
+                </div>
+                
+                <hr/>
+
+                <article class="qualidade-conteudo">
+                    <div class="qualidade-content">
+                        <img src="./src/img/reuniao.jpg" alt="reuniao">
+                    </div>
+
+                    <div class="qualidade-content">
+                        <ul>
+                            <li>
+                                <div class="qualidade-content-icons">
+                                    <img src="./src/img/medal.svg" alt="medalha">
+                                </div>
+                                <div>
+                                    <h3>Expertise Comprovada</h3>
+                                    <p class="qualidade-desktop">Profissionais qualificados e atualizados com as constantes mudanças na legislação.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qualidade-content-icons">
+                                    <img src="./src/img/user.svg" alt="user">
+                                </div>
+                                <div>
+                                    <h3>Atendimento Personalizado</h3>
+                                    <p class="qualidade-desktop">Entendemos as particularidades do seu negócio para oferecer soluções sob medida.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qualidade-content-icons">
+                                    <img src="./src/img/coding.svg" alt="coding">
+                                </div>
+                                <div>
+                                    <h3>Tecnologia e Eficiência</h3>
+                                    <p class="qualidade-desktop">Utilizamos as melhores ferramentas para garantir agilidade e precisão em todos os processos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qualidade-content-icons">
+                                    <img src="./src/img/deal.svg" alt="deal">
+                                </div>
+                                <div>
+                                    <h3>Parceria Estratégica</h3>
+                                    <p class="qualidade-desktop">Mais que um contador, um parceiro dedicado ao crescimento e à sustentabilidade da sua empresa.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </article>
             </section>
+
+            <section id="passoapasso" class="container">
+                <div class="container-titulo">
+                    <h2>Como Funciona</h2>
+                    <p>Um processo simples e transparente do início ao fim</p>
+                </div>
+
+                <ul>
+                    <li>
+                        <div class="passo">
+                            <img src="./src/img/icon-conversa.svg" alt="">
+                        </div>
+                        <div class="descricao">
+                            <div>
+                                <h4>Primeiro Contato</h4>
+                                <p>Entre em contato conosco e conte sobre seu negócio e suas necessidades.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="passo">
+                            <img src="./src/img/icon-analise.svg" alt="">
+                        </div>
+                        <div class="descricao">
+                            <h4>Diagnóstico Completo</h4>
+                            <p>Analisamos sua situação atual e identificamos oportunidades de melhoria.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="passo">
+                            <img src="./src/img/icon-proposta.svg" alt="">
+                        </div>
+                        <div class="descricao">
+                            <h4>Proposta Personalizada</h4>
+                            <p>Apresentamos uma solução sob medida com valores transparentes.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="passo">
+                            <img src="./src/img/icon-acompanhamento.svg" alt="">
+                        </div>
+                        <div class="descricao">
+                            <h4>Acompanhamento Contínuo</h4>
+                            <p>Suporte dedicado e relatórios periódicos para seu crescimento.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
         </main>
+        
+        <footer id="rodape" class="container">
+            <section>
+                <div id="redes-logo">
+                    <div id="campo-logo">
+                        <a class="campo-logo-ac" href="index.html">
+                            <img id="ac-mobile" class="logo" src="./src/img/AC_logo.svg" alt="Logo Atos Contabeis - AC">
+                            <img id="ac-desktop" class="logo" src="./src/img/Atos_Contabeis-logo.svg" alt="Logo Atos Contabeis">
+                        </a>
+                        <a class="campo-logo-tg" href="#">
+                            <img id="tg-mobile" class="logo" src="./src/img/TG Group.svg" alt="logo tg mobile">
+                            <img id="tg-desktop" class="logo" src="./src/img/Tecnon Grace.svg" alt="logo tg desktop">
+                        </a>
+                    </div>
+
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/atos-contabeis/about/?viewAsMember=true" target="_blank"><span></span></a></li>
+                        <li><a href="https://www.instagram.com/atos_contabeis/" target="_blank"><span></span></a></li>
+                        <li><a href="https://conta.olx.com.br/anuncios/publicados" target="_blank"><span></span></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61584492286154&sk=about" target="_blank"><span></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCSfFHlxBhISacDzRyD1gR4g" target="_blank"><span></span></a></li>
+                    </ul>
+                </div>
+
+                <div id="info-contatos">
+                    <div id="sobre">
+                        <h2>Sobre:</h2>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Sobre Nós</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="contato">
+                        <h2>Contato: </h2>
+                        <ul>
+                            <li>
+                                <img src="./src/img/icon-telefone.svg" alt="telefone">
+                                <p>+55 (27) 99294-5364</p>
+                            </li>
+                            <li>
+                                <a href="mailto:atoscontabeis00@gmail.com" target="_blank">
+                                    <img src="./src/img/icon-email.svg" alt="telefone">
+                                    <p>atoscontabeis00@gmail.com</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </footer> 
+
+        <div class="whatsapp">
+            <a href="https://w.app/gbtjxy" target="_blank">
+                <img src="./src/img/icon-whatsapp.svg" alt="whatsapp">
+            </a>
+        </div>
+
+        <script type="module" src="./src/js/main.js"></script>
     </body>
 </html>
