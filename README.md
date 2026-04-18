@@ -1,4 +1,4 @@
-<img  src = "./src/img/Atos Contabeis Banner.svg" width = "100%" alt = "Banner Atos Contabeis"/>
+<img  src = "./src/img/Atos Contabeis Banner.png" width = "100%" alt = "Banner Atos Contabeis"/>
 
 <br/>
 
