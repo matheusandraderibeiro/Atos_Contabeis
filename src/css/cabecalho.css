@@ -1,0 +1,324 @@
+/*======================================================================================================*/
+/* ------------------------------------- Escopo Geral do Cabeçalho -------------------------------------*/
+/*======================================================================================================*/
+
+
+#cabecalho {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--cabecalho-texto);
+    background-color: var(--cabecalho-background-secundario);
+    /* background-image: url(../img/banner__fundo-predios.jpg); */
+}
+
+/* #cabecalho #cabecalho_fundo-banner {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+} */
+
+#cabecalho #cabecalho_conteudo {
+    z-index: 2;
+    height: 100%;
+    position: relative;
+}
+
+
+/*======================================================================================================*/
+/*------------------------------------ Escopo Superior do Cabeçalho ------------------------------------*/
+/*======================================================================================================*/
+
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--branco);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #logo {
+    height: auto;
+    width: 6.25rem;
+    display: inline-block;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav {
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    width: clamp(1.5625rem, 0.6931rem + 4.347vw, 2.1875rem);
+    display: none;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label {
+    gap: .5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label input[type=checkbox] {
+    display: none;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label input[type=checkbox]:checked ~ .line1 {
+    rotate: 230deg;
+    translate: 0 11.5px;
+}
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label input[type=checkbox]:checked ~ .line2 {
+    opacity: 0;
+}
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label input[type=checkbox]:checked ~ .line3 {
+    rotate: -230deg;
+    translate: 0 -11.5px;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav label .botao-traco {
+    width: 100%;
+    height: 3.5px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    transition: 300ms all ease-in-out;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav nav {
+    top: 17%;
+    z-index: 3;
+    width: 40%;
+    right: -60%;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+    border-radius: 15px 0 0 10px;
+    transition: 300ms all ease-in-out;
+    background-color: var(--cabecalho-menu-lateral-background);
+    display: none;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav nav.open {
+    right: 0;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav nav ul {
+    gap: 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__nav nav ul li a {
+    color: var(--cabecalho-texto);
+}
+
+
+/*======================================================================================================*/
+/*------------------------------------ Escopo Inferior do Cabeçalho ------------------------------------*/
+/*======================================================================================================*/
+
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques article {
+    gap: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques article .botao_destaque {
+    border: none;
+    height: auto;
+    background: none;
+    width: clamp(1.4375rem, 0.9945rem + 2.215vw , 3.75rem);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques article .botao_destaque img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(.9);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques article input[type=radio] {
+    display: none;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section {
+    width: 80%;
+    position: relative;
+    text-align: center;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul {
+    width: 500%;
+    height: 28rem;
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li {
+    width: 20%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div {
+    gap: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--cabecalho-texto);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div h1 {
+    font-size: clamp(1.5625rem, 1.1433rem + 2.0958vw, 3.75rem);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div .descricao-desktop {
+    display: none;
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button {
+    border: none;
+    width: 10rem;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--btn-background);
+}
+
+#cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button a {
+    color: var(--btn-texto);
+}
+
+#slide1:checked ~ section div ul {
+    margin-left: 0;
+}
+#slide2:checked ~ section div ul {
+    margin-left: -100%;
+}
+#slide3:checked ~ section div ul {
+    margin-left: -200%;
+}
+#slide4:checked ~ section div ul {
+    margin-left: -300%;
+}
+#slide5:checked ~ section div ul {
+    margin-left: -400%;
+}
+#slide6:checked ~ section div ul {
+    margin-left: -500%;
+}
+
+
+/*======================================================================================================*/
+/*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
+/*======================================================================================================*/
+
+
+@media screen and (min-width: 768px) {
+    #cabecalho #cabecalho_conteudo #cabecalho__nav #logo {
+        width: clamp(12.5rem, 10.8946rem + 3.3445vw, 13.75rem);
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__nav #botao-nav {
+        display: none;
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__nav nav {
+        padding: 0;
+        display: flex;
+        position: static;
+        justify-content: flex-end;
+        background-color: transparent;
+        display: none;
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__nav nav ul {
+        gap: 2rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div .descricao-mobile {
+        display: none;
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div .descricao-desktop {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    #cabecalho #cabecalho_conteudo #cabecalho__nav nav ul li:hover {
+        transform: scale(1.1);
+    } 
+
+    #cabecalho #cabecalho_conteudo #cabecalho__nav nav ul li a:hover {
+        transition: 0.3s;
+        font-weight: 500;
+        text-decoration: underline;
+        color: var(--cabecalho-texto-hover);
+    } 
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques article .botao_destaque:active {
+        transform: scale(1.05);
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques article .botao_destaque:hover img {
+        transform: scale(1.1);
+        filter: brightness(10);
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button {
+        cursor: pointer;
+    } #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button:hover {
+        background-color: var(--btn-background-hover);
+    } #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button:hover a {
+        font-weight: 700;
+        color: var(--btn-texto-hover);
+    } #cabecalho #cabecalho_conteudo #cabecalho__destaques section #overflow ul li div button:active {
+        transform: scale(1.02);
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #cabecalho #cabecalho_conteudo #cabecalho__nav #logo {
+        width: clamp(13.75rem, 6.0447rem + 9.0253vw, 16.875rem);
+    }
+
+    #cabecalho #cabecalho_conteudo #cabecalho__destaques {
+        margin: clamp(1rem, -2.9518rem + 4.6287vw, 7rem) 0;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #cabecalho #cabecalho_conteudo #cabecalho__nav #logo {
+        width: clamp(16.875rem, 12.1382rem + 3.9474vw, 20.625rem);
+    }
+}

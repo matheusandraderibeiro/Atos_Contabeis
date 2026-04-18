@@ -1,0 +1,153 @@
+@import url("../css/rodape.css");
+@import url("../css/contato.css");
+@import url("../css/servicos.css");
+@import url("../css/whatsapp.css");
+@import url("../css/cabecalho.css");
+@import url("../css/qualidades.css");
+@import url("../css/passoapasso.css");
+@import url("../css/cabecalho-paginas.css");
+
+@font-face {
+    font-size: 16px;
+    font-style: normal;
+    font-display: swap;
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+:root {
+    /* Paleta de Cores */
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --amarelo-ouro: #FFC33C;
+    --roxo-meia-noite: #1A151F;
+    --azul-acinzentado-muito-escuro: #232935;
+
+    /* Geral */
+    --texto: #232935; 
+
+    /* Botões */
+    --btn-texto: #000000;
+    --btn-background: #FFFFFF;
+    --btn-texto-hover: #FFFFFF;
+    --btn-background-hover: #FFC33C;
+    
+    /* Cabecalho */
+    --cabecalho-texto: #FFFFFF;
+    --cabecalho-texto-hover: #FFC33C;
+    --cabecalho-texto-secundario: #1A151F;
+    --cabecalho-background-secundario: #FFC33C;
+    --cabecalho-texto-hover-secundario: #FFFFFF;
+    --cabecalho-menu-lateral-background: #1A151F;
+
+    /* Serviços */
+    --servicos-texto-hover: #FFC33C;
+    --servicos-texto-primario: #000000;
+    --servicos-background-hover: #000000;
+    --servicos-texto-secundario: #FFFFFF;
+    --servicos-background-primario: #FFC33C;
+    --servicos-background-secundario: #1A151F;
+
+    /* Qualidades */
+    --qualidades-texto-primario: #FFFFFF;
+    --qualidades-texto-secundario: #000000;
+    --qualidades-background-primario: #1A151F;
+    --qualidades-background-secundario: #FFC33C;
+
+    /* Passo a Passo */
+    --passo-texto-primario: #FFFFFF;
+    --passo-texto-secundario: #FFC33C;
+    --passo-background-primario: #1A151F;
+
+    /* Rodape */
+    --rodape-texto: #FFFFFF;
+    --rodape-background: #000000;
+    --rodape-texto-hover: #FFC33C;  
+
+    /* Whatsapp */
+    --whatsapp-texto: #FFFFFF;
+    --whatsapp-background: #25D366;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    overflow-x: hidden;
+    color: var(--texto);
+    font-family: "Poppins", sans-serif;
+} 
+
+main {
+    margin: 1rem 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding-block: .65rem;
+    padding-inline: clamp(0.625rem, 0.3409rem + 1.4205vw, 1.25rem);
+}
+
+.container-titulo {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    text-align: center;
+} .container-titulo h2 {
+    font-size: clamp(1.5rem, 1.2368rem + 1.3158vw, 2.5rem);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;   
+}
+
+#ac-desktop, #tg-desktop {
+    display: none;
+}
+
+/*======================================================================================================*/
+/*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
+/*======================================================================================================*/
+
+@media screen and (min-width: 768px) {
+    #ac-mobile, #tg-mobile {
+        display: none;
+    }
+
+    #ac-desktop, #tg-desktop {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: clamp(1rem, 0.25rem + 0.8333vw, 1.25rem);
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .container-titulo h2 {
+        font-size: clamp(2.5rem, 0rem + 2.6042vw, 3.125rem);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: clamp(1.25rem, 0.9342rem + 0.2632vw, 1.5rem);
+    }
+
+    .container-titulo h2 {
+        font-size: clamp(2.5rem, 0rem + 2.6042vw, 3.125rem);
+    }
+}
