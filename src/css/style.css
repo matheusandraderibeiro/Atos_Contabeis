@@ -68,13 +68,6 @@
     --whatsapp-texto: #FFFFFF;
     --whatsapp-background: #25D366;
 
-      /* Espaçamentos */
-    --container__pd--block: clamp(0rem, -0.0455rem + 0.2273vw, 0.1rem); /* Padding fluido de 0px a 2px para telas entre 320px e 1024px */
-    --container__pd--inline: clamp(0.5rem, 0.4545rem + 0.2273vw, 0.6rem); /* Padding fluido de 8px a 10px para telas entre 320px e 1024px */
-
-    /* Dimenções */
-    --btn__width--controle: clamp(1.4375rem, 0.7768rem + 3.3036vw, 3.75rem); /* Largura fluida de 23px a 60px para telas entre 320px e 1440px */
-
 }
 
 * {
@@ -119,7 +112,7 @@ main {
     height: 100%;   
 }
 
-#cabecalho__nav--logo-AcDesktop, #tg-desktop {
+#ac-desktop, #tg-desktop {
     display: none;
 }
 
@@ -128,11 +121,11 @@ main {
 /*======================================================================================================*/
 
 @media screen and (min-width: 768px) {
-    #cabecalho__nav--logo-AcMobile, #tg-mobile {
+    #ac-mobile, #tg-mobile {
         display: none;
     }
 
-    #cabecalho__nav--logo-AcDesktop, #tg-desktop {
+    #ac-desktop, #tg-desktop {
         display: block;
     }
 }

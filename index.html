@@ -1,23 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="./src/css/style.css">
-        <link rel="shortcut icon" href="./src/img/AC - icon.svg" type="image/x-icon">
-
-        <script type="module" src="./src/js/main.js"></script>
-
         <title>Atos Contabeis</title>
     </head>
-
+    
     <body>
         <header id="cabecalho">
-            <a href="index.html">
-                <img id="cabecalho__nav--logo-AcMobile"  class="logo" src="./src/img/AC_logo.svg" alt="Logo Atos Contabeis mobile">
-                <img id="cabecalho__nav--logo-AcDesktop" class="logo" src="./src/img/Atos_Contabeis-logo.svg" alt="Logo Atos Contabeis desktop">
-            </a>
+            <div id="cabecalho_fundo-banner"></div>
+
+            <section id="cabecalho_conteudo" class="container">
+                <div id="cabecalho__nav">
+                    <a id="logo" href="index.html">
+                        <img id="ac-mobile" class="logo" src="./src/img/AC_logo.svg" alt="Logo Atos Contabeis - AC">
+                        <img id="ac-desktop" class="logo" src="./src/img/Atos_Contabeis-logo.svg" alt="Logo Atos Contabeis">
+                    </a>
+
+                    <button id="botao-nav">
+                        <label for="checkbox">
+                            <input type="checkbox" name="botaoMenu" id="checkbox">
+                            <div class="botao-traco line1"></div>
+                            <div class="botao-traco line2"></div>
+                            <div class="botao-traco line3"></div>
+                        </label>
+                    </button>
+
+                    <nav class="mobileMenu">
+                        <ul>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Sobre Nós</a></li>
+                            <li><a href="./contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="cabecalho__destaques">
+                    <article>
+                        <button class="botao_destaque"><img src="./src/img/seta_esquerda.svg" alt=""></button>
+
+                        <input type="radio" name="slider" id="slide1" checked>
+                        <input type="radio" name="slider" id="slide2">
+                        <input type="radio" name="slider" id="slide3">
+                        <input type="radio" name="slider" id="slide4">
+                        <input type="radio" name="slider" id="slide5">
+
+                         <section>
+                            <div id="overflow">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <h1>PARE DE PAGAR IMPOSTOS A MAIS!</h1>
+                                            <p class="descricao-mobile">Otimizamos sua carga tributária com estratégias legais para transformar despesas em lucro real.</p>
+                                            <p class="descricao-desktop">Sua empresa está perdendo dinheiro com um planejamento fiscal ultrapassado. Nossa contabilidade estratégica identifica brechas legais e otimiza sua carga tributária, transformando despesa em lucro. Descubra agora quanto você pode economizar.</p>
+                                            <button><a href="#">Clique Aqui.</a></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h1>O FIM DA DOR DE CABEÇA COM O FISCO</h1>
+                                            <p class="descricao-mobile">Garanta conformidade total e zero burocracia com tecnologia de ponta para focar no seu negócio.</p>
+                                            <p class="descricao-desktop">Esqueça as multas, os prazos perdidos e a burocracia interminável. Garantimos a conformidade total da sua empresa com a legislação, usando tecnologia de ponta para que você tenha paz de espírito e foque 100% no seu negócio.</p>
+                                            <button><a href="#">Clique Aqui.</a></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h1>CRESCIMENTO ACELERADO COMEÇA AQUI</h1>
+                                            <p class="descricao-mobile">Insights financeiros e relatórios em tempo real para apoiar suas decisões e impulsionar o crescimento.</p>
+                                            <p class="descricao-desktop">Não somos apenas contadores, somos seus parceiros de negócios. Fornecemos relatórios gerenciais e insights financeiros em tempo real, dando a você o poder de tomar decisões estratégicas que impulsionam o crescimento e a lucratividade.</p>
+                                            <button><a href="#">Clique Aqui.</a></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h1>ABRA SUA EMPRESA EM TEMPO RECORDE</h1>
+                                            <p class="descricao-mobile">Abrimos seu CNPJ com agilidade e escolhemos o melhor regime tributário para você começar a faturar.</p>
+                                            <p class="descricao-desktop">Sonha em empreender? Deixe a parte chata conosco. Cuidamos de todo o processo de abertura, desde a escolha do regime tributário ideal até a emissão do CNPJ, garantindo agilidade e zero complicação para você começar a faturar.</p>
+                                            <button><a href="#">Clique Aqui.</a></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h1>RH SIMPLIFICADO: FOCO NAS PESSOAS, NÃO NOS PAPÉIS</h1>
+                                            <p class="descricao-mobile">Cuidamos da folha e obrigações trabalhistas, protegendo sua empresa e valorizando sua equipe.</p>
+                                            <p class="descricao-desktop">A gestão de pessoal é complexa, mas não precisa ser. Assumimos toda a rotina de folha de pagamento, admissões e obrigações trabalhistas, garantindo que sua equipe esteja feliz e sua empresa protegida contra passivos trabalhistas.</p>
+                                            <button><a href="#">Clique Aqui.</a></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <button class="botao_destaque"><img src="./src/img/seta_direita.svg" alt=""></button>
+                    </article>
+                </div>
+            </section>
         </header>
 
         <main>
@@ -316,8 +395,8 @@
                 <div id="redes-logo">
                     <div id="campo-logo">
                         <a class="campo-logo-ac" href="index.html">
-                            <img id="cabecalho__nav--logo-AcMobile" class="logo" src="./src/img/AC_logo.svg" alt="Logo Atos Contabeis - AC">
-                            <img id="cabecalho__nav--logo-AcDesktop" class="logo" src="./src/img/Atos_Contabeis-logo.svg" alt="Logo Atos Contabeis">
+                            <img id="ac-mobile" class="logo" src="./src/img/AC_logo.svg" alt="Logo Atos Contabeis - AC">
+                            <img id="ac-desktop" class="logo" src="./src/img/Atos_Contabeis-logo.svg" alt="Logo Atos Contabeis">
                         </a>
                         <a class="campo-logo-tg" href="#">
                             <img id="tg-mobile" class="logo" src="./src/img/TG Group.svg" alt="logo tg mobile">
