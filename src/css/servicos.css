@@ -1,3 +1,7 @@
+#servicos {
+    margin-bottom: 2rem;
+}
+
 /*======================================================================================================*/
 /* -------------------------------- Controle de Cards da Área de Serviços ------------------------------*/
 /*======================================================================================================*/
@@ -7,7 +11,7 @@
     display: none;
 }
 
-#servicos .servicos__controle {
+#servicos .servico-controle {
     gap: 1rem;
     width: 100%;
     display: flex;
@@ -15,27 +19,26 @@
     justify-content: flex-end;
 }
 
-#servicos .servicos__controle button {
+#servicos .servico-controle button {
     border: none;
     height: auto;
-    cursor: pointer;
     background: none;
-    width: var(--btn__width--controle);
+    width: clamp(1.4375rem, 0.9945rem + 2.215vw , 3.75rem);
 }
 
 
 /*======================================================================================================*/
-/* -------------------------------- Controle de Cards da Área de Serviços ------------------------------*/
+/* -------------------------------------- Cards da Área de Serviços ------------------------------------*/
 /*======================================================================================================*/
 
 
-.servicos__card--container {
+#servicos .servicos-card .overflow {
     width: 100%;
     margin-top: 5px;
     overflow: hidden;
 }
 
-.card__container--content {
+#servicos .servicos-card .overflow .card-content {
     gap: 1rem;
     width: 400%;
     height: auto;
@@ -44,30 +47,29 @@
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
 
-#servico1:checked ~ .card__container--content {
+#servico1:checked ~ .servicos-card .overflow .card-content {
     margin-left: 0%;
 } 
-#servico2:checked ~ .card__container--content {
+#servico2:checked ~ .servicos-card .overflow .card-content {
     margin-left: -100%;
 }
-#servico3:checked ~ .card__container--content {
+#servico3:checked ~ .servicos-card .overflow .card-content {
     margin-left: -200%;
 }
-#servico4:checked ~ .card__container--content {
+#servico4:checked ~ .servicos-card .overflow .card-content {
     margin-left: -300%;
 }
 
-.card__container--item {
+#servicos .servicos-card .overflow .card-content .card-item {
     width: 25%;
     float: left;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card__container--item article {
-    display: grid;
-}
-
-.card__item--supLeft {
+#servicos .servicos-card .overflow .card-content .card-item .item-superior {
     gap: 1rem;
     display: flex;
     padding: 10px;
@@ -77,13 +79,13 @@
     background-color: var(--servicos-background-primario);
 }
 
-.supLeft__content--icon {
+#servicos .servicos-card .overflow .card-content .card-item .item-superior .card-content-icon {
     width: 1.8rem;
     height: 1.8rem;
     transition: 450ms all ease-in-out;
 }
 
-.supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item .item-superior .card-content-icon .card-icon {
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -93,27 +95,203 @@
     transition: 450ms all ease-in-out;
 }
 
-.card__container--item:nth-child(1) .supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item:nth-child(1) .item-superior .card-content-icon .card-icon {
     background-image: url(../img/doc-hover.svg);
 }
 
-.card__container--item:nth-child(2) .supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item:nth-child(2) .item-superior .card-content-icon .card-icon {
     background-image: url(../img/calc-hover.svg);
 }
 
-.card__container--item:nth-child(3) .supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item:nth-child(3) .item-superior .card-content-icon .card-icon {
     background-image: url(../img/people-hover.svg);
 }
 
-.card__container--item:nth-child(4) .supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item:nth-child(4) .item-superior .card-content-icon .card-icon {
     background-image: url(../img/Shield-hover.svg);
 }
 
-.card__container--item:nth-child(5) .supLeft__content--icon span {
+#servicos .servicos-card .overflow .card-content .card-item:nth-child(5) .item-superior .card-content-icon .card-icon {
     background-image: url(../img/arrow-hover.svg);
 }
 
-.card__item--supLeft h3 {
+#servicos .servicos-card .overflow .card-content .card-item .item-superior h3 {
     font-size: 1rem;
     color: var(--servicos-texto-primario);
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-meio {
+    padding: 10px;
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-meio h3 {
+    display: none;
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-meio ul li {
+    gap: 1rem;
+    display: flex;
+    margin-top: 10px;
+    align-items: flex-start;
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-meio ul li img {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 4px;
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-inferior {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--servicos-background-secundario);
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-inferior p {
+    font-size: 0.75rem;
+    color: var(--servicos-texto-secundario);
+}
+
+#servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior .item-inferior a {
+    /* margin-top: 10px;
+    align-self: flex-end;
+    transition: 450ms all ease-in-out;
+    color: var(--servicos-texto-secundario); */
+    display: none;
+}
+
+
+/*======================================================================================================*/
+/*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
+/*======================================================================================================*/
+
+
+@media screen and (min-width: 768px) {
+    #servicos .servicos-card .overflow .card-content .card-item .item-superior h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #servicos .servico-controle {
+        display: none;
+    }
+
+    #servicos hr {
+        margin: 1rem 0;
+    }
+
+    #servicos .servicos-card .overflow .card-content {
+        gap: 0.7rem;
+        width: 100%;
+        height: 25rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item {
+        width: 14%;
+        height: 24rem;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        flex-direction: row;
+        border-radius: 10px;
+        transition: 450ms all ease-in-out;
+    } #servicos .servicos-card .overflow .card-content .card-item.ativo {
+        width: 100%;
+    } #servicos .servicos-card .overflow .card-content .card-item.ativo:hover {
+        border: 1px solid var(--amarelo-ouro);
+        box-shadow: 1px 13px 20px 3px rgba(0,0,0,0.39);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item .item-superior {
+        z-index: 2;
+        width: 100%;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    } #servicos .servicos-card .overflow .card-content .card-item:hover .item-superior {
+        background-color: var(--servicos-background-hover);
+    } #servicos .servicos-card .overflow .card-content .card-item.ativo .item-superior {
+        width: 15%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 10px 0 0 10px;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item .item-superior .card-content-icon {
+        width: 8rem;
+        height: 8rem;
+    }#servicos .servicos-card .overflow .card-content .card-item:hover .item-superior .card-content-icon {
+        transform: scale(1.1);
+    }#servicos .servicos-card .overflow .card-content .card-item.ativo .item-superior .card-content-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item .item-superior h3 {
+        display: none;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item .content-meio-inferior {
+        z-index: 1;
+        left: -50rem;
+        position: absolute;
+        transition: 450ms all ease-in-out;
+    } #servicos .servicos-card .overflow .card-content .card-item.ativo .content-meio-inferior {
+        left: 15%;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item.ativo .content-meio-inferior .item-meio {
+        height: 100%;
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item.ativo .content-meio-inferior .item-meio h3 {
+        display: block;
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item.ativo .content-meio-inferior .item-inferior {
+        border-radius: 0 0 10px 0;
+    }
+
+/*======================================================================================================*/
+/*--------------------------------- Cards da Área de Serviços Desktop Hover ----------------------------*/
+/*======================================================================================================*/
+
+    #servicos .servicos-card .overflow .card-content .card-item:nth-child(1):hover .item-superior .card-content-icon .card-icon {
+        background-image: url(../img/doc.svg);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item:nth-child(2):hover .item-superior .card-content-icon .card-icon {
+        background-image: url(../img/calc.svg);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item:nth-child(3):hover .item-superior .card-content-icon .card-icon {
+        background-image: url(../img/people.svg);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item:nth-child(4):hover .item-superior .card-content-icon .card-icon {
+        background-image: url(../img/Shield.svg);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item:nth-child(5):hover .item-superior .card-content-icon .card-icon {
+        background-image: url(../img/arrow.svg);
+    }
+
+    #servicos .servicos-card .overflow .card-content .card-item.ativo .content-meio-inferior .item-inferior a:hover  {
+        transform: scale(1.1);
+        color: var(--servicos-texto-hover);
+    }
 }

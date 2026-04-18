@@ -7,7 +7,7 @@
     height: auto;
     padding-block: var(--container__pd--block);
     padding-inline: var(--container__pd--inline);
-    background-color: var(--cabecalho-background);
+    background-color: var(--cabecalho-background-secundario);
 }
 
 #cabecalho a {

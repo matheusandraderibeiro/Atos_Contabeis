@@ -1,32 +1,80 @@
-@import url(servicos.css);
-@import url(cabecalho.css);
+@import url("../css/rodape.css");
+@import url("../css/contato.css");
+@import url("../css/servicos.css");
+@import url("../css/whatsapp.css");
+@import url("../css/cabecalho.css");
+@import url("../css/qualidades.css");
+@import url("../css/passoapasso.css");
+@import url("../css/cabecalho-paginas.css");
 
 @font-face {
+    font-size: 16px;
     font-style: normal;
     font-display: swap;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
     src: url("../fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 :root {
-    /* Paleta de Cores Base*/
+    /* Paleta de Cores */
     --preto: #000000;
     --branco: #FFFFFF;
     --amarelo-ouro: #FFC33C;
     --roxo-meia-noite: #1A151F;
     --azul-acinzentado-muito-escuro: #232935;
 
-    /* Paleta de Cores - Cabeçalho*/
-    --cabecalho-background: var(--amarelo-ouro);
+    /* Geral */
+    --texto: #232935; 
 
-    /* Paleta de Cores - Serviços*/
+    /* Botões */
+    --btn-texto: #000000;
+    --btn-background: #FFFFFF;
+    --btn-texto-hover: #FFFFFF;
+    --btn-background-hover: #FFC33C;
+    
+    /* Cabecalho */
+    --cabecalho-texto: #FFFFFF;
+    --cabecalho-texto-hover: #FFC33C;
+    --cabecalho-texto-secundario: #1A151F;
+    --cabecalho-background-secundario: #FFC33C;
+    --cabecalho-texto-hover-secundario: #FFFFFF;
+    --cabecalho-menu-lateral-background: #1A151F;
 
-    /* Espaçamentos */
+    /* Serviços */
+    --servicos-texto-hover: #FFC33C;
+    --servicos-texto-primario: #000000;
+    --servicos-background-hover: #000000;
+    --servicos-texto-secundario: #FFFFFF;
+    --servicos-background-primario: #FFC33C;
+    --servicos-background-secundario: #1A151F;
+
+    /* Qualidades */
+    --qualidades-texto-primario: #FFFFFF;
+    --qualidades-texto-secundario: #000000;
+    --qualidades-background-primario: #1A151F;
+    --qualidades-background-secundario: #FFC33C;
+
+    /* Passo a Passo */
+    --passo-texto-primario: #FFFFFF;
+    --passo-texto-secundario: #FFC33C;
+    --passo-background-primario: #1A151F;
+
+    /* Rodape */
+    --rodape-texto: #FFFFFF;
+    --rodape-background: #000000;
+    --rodape-texto-hover: #FFC33C;  
+
+    /* Whatsapp */
+    --whatsapp-texto: #FFFFFF;
+    --whatsapp-background: #25D366;
+
+      /* Espaçamentos */
     --container__pd--block: clamp(0rem, -0.0455rem + 0.2273vw, 0.1rem); /* Padding fluido de 0px a 2px para telas entre 320px e 1024px */
     --container__pd--inline: clamp(0.5rem, 0.4545rem + 0.2273vw, 0.6rem); /* Padding fluido de 8px a 10px para telas entre 320px e 1024px */
 
     /* Dimenções */
     --btn__width--controle: clamp(1.4375rem, 0.7768rem + 3.3036vw, 3.75rem); /* Largura fluida de 23px a 60px para telas entre 320px e 1440px */
+
 }
 
 * {
@@ -40,13 +88,30 @@
 body {
     width: 100%;
     height: 100%;
+    font-size: 1rem;
     overflow-x: hidden;
+    color: var(--texto);
     font-family: "Poppins", sans-serif;
-}
+} 
 
 main {
-    padding-block: var(--container__pd--block);
-    padding-inline: var(--container__pd--inline);
+    margin: 1rem 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding-block: .65rem;
+    padding-inline: clamp(0.625rem, 0.3409rem + 1.4205vw, 1.25rem);
+}
+
+.container-titulo {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    text-align: center;
+} .container-titulo h2 {
+    font-size: clamp(1.5rem, 1.2368rem + 1.3158vw, 2.5rem);
 }
 
 .logo {
@@ -54,49 +119,42 @@ main {
     height: 100%;   
 }
 
-#cabecalho__nav--logo-AcDesktop {
+#cabecalho__nav--logo-AcDesktop, #tg-desktop {
     display: none;
 }
-
-.container--titulo {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    text-align: center;
-} .container--titulo h2 {
-    font-size: clamp(1.5rem, 1.2368rem + 1.3158vw, 2.5rem); /* Largura fluida de 24px a 40px para telas entre 320px e 1536px */
-}
-
 
 /*======================================================================================================*/
 /*-------------------------------- Responsividade - Área de Mídia Queries ------------------------------*/
 /*======================================================================================================*/
 
-
 @media screen and (min-width: 768px) {
-    #cabecalho__nav--logo-AcDesktop {
-    display: block;
+    #cabecalho__nav--logo-AcMobile, #tg-mobile {
+        display: none;
     }
 
-    #cabecalho__nav--logo-AcMobile {
-        display: none;
+    #cabecalho__nav--logo-AcDesktop, #tg-desktop {
+        display: block;
     }
 }
 
 @media screen and (min-width: 1440px) {
     body {
-        font-size: clamp(1rem, 0.25rem + 0.8333vw, 1.25rem); /* Largura fluida de 16px a 20px para telas entre 1440px e 1920px */
+        font-size: clamp(1rem, 0.25rem + 0.8333vw, 1.25rem);
     }
 }
 
 @media screen and (min-width: 1536px) {
-    .container--titulo h2 {
-        font-size: clamp(2.5rem, 1.5625rem + 0.9766vw, 3.125rem); /* Largura fluida de 40px a 50px para telas entre 1536px e 2560px */
+    .container-titulo h2 {
+        font-size: clamp(2.5rem, 0rem + 2.6042vw, 3.125rem);
     }
 }
 
 @media screen and (min-width: 1920px) {
     body {
-        font-size: clamp(1.25rem, 0.9342rem + 0.2632vw, 1.5rem); /* Largura fluida de 20px a 24px para telas entre 1920px e 3440px */
+        font-size: clamp(1.25rem, 0.9342rem + 0.2632vw, 1.5rem);
+    }
+
+    .container-titulo h2 {
+        font-size: clamp(2.5rem, 0rem + 2.6042vw, 3.125rem);
     }
 }

@@ -1,0 +1,216 @@
+#rodape {
+    height: auto;
+    color: var(--rodape-texto); 
+    background-color: var(--rodape-background);
+}
+
+#rodape section {
+    margin: 2rem 0 .5rem 0;
+}
+
+#rodape section #redes-logo #campo-logo {
+    display: flex;
+    justify-content: space-around;
+}
+
+#rodape section #redes-logo #campo-logo .campo-logo-ac, #rodape section #redes-logo #campo-logo .campo-logo-tg {
+    width: 100px;
+    height: auto;
+}
+
+#rodape section #redes-logo ul {
+    display: flex;
+    margin-top: 1.4rem;
+    justify-content: space-around;
+}
+
+#rodape section #redes-logo ul li {
+    list-style: none;
+}
+
+#rodape section #redes-logo ul li a span {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#rodape section #redes-logo ul li:nth-child(1) a span {
+    background-image: url(../img/icon-linkedin.svg);
+}
+
+#rodape section #redes-logo ul li:nth-child(2) a span {
+    background-image: url(../img/icon-instagram.svg);
+}
+
+#rodape section #redes-logo ul li:nth-child(3) a span {
+    background-image: url(../img/icon-olx.svg);
+}
+
+#rodape section #redes-logo ul li:nth-child(4) a span {
+    background-image: url(../img/icon-facebook.svg);
+}
+
+#rodape section #redes-logo ul li:nth-child(5) a span {
+    background-image: url(../img/icon-youtube.svg);
+}
+
+#rodape section #info-contatos {
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#rodape section #info-contatos h2 {
+    margin-bottom: 0.3rem;
+}
+
+#rodape section #info-contatos ul li {
+    margin-bottom: 0.5rem;
+}
+
+#rodape section #info-contatos #sobre {
+    display: none;
+}
+
+#rodape section #info-contatos #sobre ul li a, #rodape section #info-contatos #contato ul li a {
+    color: var(--rodape-texto);
+}
+
+#rodape section #info-contatos #contato ul li {
+    display: flex;
+}
+
+#rodape section #info-contatos #contato ul li img {
+    display: none;
+}
+
+/*======================================================================================================*/
+/*--------------------------------- Responsividade - Área de Mídia Queries -----------------------------*/
+/*======================================================================================================*/
+
+
+@media screen and (min-width: 768px) {
+    #rodape section {
+        gap: 1.3rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #rodape section #redes-logo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rodape section #redes-logo #campo-logo .campo-logo-ac {
+        width: clamp(8.75rem, 5.646rem + 9.027vw, 16.875rem);
+    }
+
+    #rodape section #redes-logo #campo-logo .campo-logo-tg {
+        width: clamp(10.625rem, 7.521rem + 9.027vw, 18.75rem);
+    }
+
+    #rodape section #info-contatos {
+        gap: 1.5rem;
+        width: 50%;
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #rodape section {
+        gap: 3rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    #rodape section #redes-logo, #rodape section #info-contatos {
+        width: 50%;
+    }
+
+    #rodape section #redes-logo #campo-logo {
+        align-items: center;
+        justify-content: space-around;
+        border-right: solid 1px var(--branco);
+    }
+
+    #rodape section #redes-logo ul li:nth-child(1):hover a span {
+        background-image: url(../img/linkedin-hover.svg);
+    }
+
+    #rodape section #redes-logo ul li:nth-child(2):hover a span {
+        background-image: url(../img/instagram-hover.svg);
+    }
+
+    #rodape section #redes-logo ul li:nth-child(3):hover a span {
+        background-image: url(../img/olx-hover.svg);
+    }
+
+    #rodape section #redes-logo ul li:nth-child(4):hover a span {
+        background-image: url(../img/facebook-hover.svg);
+    }
+
+    #rodape section #redes-logo ul li:nth-child(5):hover a span {
+        background-image: url(../img/youtube-hover.svg);
+    }
+
+    #rodape section #info-contatos {  
+        gap: 5rem;      
+    }
+
+    #rodape section #info-contatos #contato ul li, #rodape section #info-contatos #contato ul li a {
+        gap: .5rem;
+    }
+
+    #rodape section #info-contatos #sobre ul li a:hover {
+        color: var(--rodape-texto-hover);
+    }
+
+    #rodape section #info-contatos #contato ul li a {
+        display: flex;
+        align-items: center;
+    } #rodape section #info-contatos #contato ul li a:hover {
+        color: var(--rodape-texto-hover);
+    }
+
+    #rodape section #info-contatos #contato ul li img {
+        width: 28px;
+        height: auto;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #rodape section #redes-logo, #rodape section #info-contatos {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #rodape section #redes-logo ul {
+        gap: 4rem;
+        margin-left: 3rem;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    #rodape section #redes-logo, #rodape section #info-contatos {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 3440px) {
+    #rodape section #redes-logo, #rodape section #info-contatos {
+        width: 23%;
+    }
+}
+
